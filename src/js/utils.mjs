@@ -29,3 +29,12 @@ export function renderListWithTemplate(templateFn, parentElement, list, position
   }
   parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
 }
+
+export function getParam(param){
+  const queryString= window.location.search;
+  const urlParams= new URLSearchParams(queryString);
+  const products= urlParams.get(param);
+  return products;
+
+
+}
